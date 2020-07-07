@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*https://zocada.com/dark-and-light-theme-switcher-using-css-variables-and-pure-javascript/*/
+.theme-light {
+  --bg-background-primary: white;
+  --bg-background-secondary: #F8FAFC;
+  --bg-background-tertiary: #F1F5F8;
+
+  --bg-background-form: white;
+
+  --text-copy-primary: #3D4852;
+  --text-copy-secondary: #606F7B;
+
+  --border-border-color-primary: white;
+
+  --markdown-body: #24292e;
+}
+
+.theme-dark {
+  --bg-background-primary: #0D2438;
+  --bg-background-secondary: #102C44;
+  --bg-background-tertiary: #1E3951;
+
+  --bg-background-form: #1a202c;
+
+  --text-copy-primary: #cbd5e0;
+  --text-copy-secondary: #e2e8f0;
+
+  --border-border-color-primary:  #1a202c;
+
+  --markdown-body: #cbd5e0;
+}
+
+.bg-background-primary {
+  background-color: var(--bg-background-primary);
+}
+.bg-background-secondary {
+  background-color: var(--bg-background-secondary);
+}
+.bg-background-tertiary {
+  background-color: var(--bg-background-tertiary);
+}
+
+.bg-background-form {
+  background-color: var(--bg-background-form);
+}
+
+.text-copy-primary {
+  color: var(--text-copy-primary);
+}
+.text-copy-secondary {
+  color: var(--text-copy-secondary);
+}
+
+.border-border-color-primary {
+  border-color: var(--border-border-color-primary);
+}
+
+.icon {
+  fill: var(--text-copy-primary);
+}
+.icon:hover {
+  fill: var(--text-copy-secondary);
+}
+
+
+.cv {
+  color: #1c75bc;
+}
+.cv:hover {
+  color: #3290dd;
+}
+
+a:hover {
+  font-weight: bolder;
+}
+
+nav .active {
+  font-weight: bold;
+  border-color: var(--border-border-color-primary);
+  /*@apply border-black border-b;*/
+}
+
+
+.content-wrapper {
+  transition: background-color .25s;
+}
+
+.container-inner {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-inner {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-inner {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-inner {
+    max-width: 800px;
+  }
+}
+
+.responsive-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
