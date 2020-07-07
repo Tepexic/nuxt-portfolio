@@ -63,7 +63,10 @@
             <img src="images/tech-logos/react.svg" alt="ReactJS">
           </div>
           <div class="w-16 mx-auto flex items-center">
-            <img src="images/tech-logos/node.png" alt="NodeJS">
+            <img src="images/tech-logos/nuxt.png" alt="Nuxt">
+          </div>
+          <div class="w-16 mx-auto flex items-center">
+            <img class="rounded-lg" src="images/tech-logos/node.png" alt="NodeJS">
           </div>
           <div class="w-16 mx-auto flex items-center">
             <img src="images/tech-logos/electron.svg" alt="ElectronJS">
@@ -88,10 +91,6 @@
           </div>
           <div class="w-16 mx-auto flex items-center">
             <img src="images/tech-logos/matlab.png" alt="Matlab">
-          </div>
-          <div class="w-16 mx-auto flex items-center">
-            <img v-if="theme === 'theme-light'" src="images/tech-logos/latex.svg" alt="Latex">
-            <img v-else src="images/tech-logos/latex-dark.svg" alt="Latex">
           </div>
         </div>
       </div>

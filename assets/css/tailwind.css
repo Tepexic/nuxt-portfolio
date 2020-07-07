@@ -1,6 +1,5 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 
 /*https://zocada.com/dark-and-light-theme-switcher-using-css-variables-and-pure-javascript/*/
@@ -8,14 +7,14 @@
   --bg-background-primary: white;
   --bg-background-secondary: #F8FAFC;
   --bg-background-tertiary: #F1F5F8;
-
+  
   --bg-background-form: white;
-
+  
   --text-copy-primary: #3D4852;
   --text-copy-secondary: #606F7B;
-
+  
   --border-border-color-primary: white;
-
+  
   --markdown-body: #24292e;
 }
 
@@ -23,14 +22,14 @@
   --bg-background-primary: #0D2438;
   --bg-background-secondary: #102C44;
   --bg-background-tertiary: #1E3951;
-
+  
   --bg-background-form: #1a202c;
-
+  
   --text-copy-primary: #cbd5e0;
   --text-copy-secondary: #e2e8f0;
-
+  
   --border-border-color-primary:  #1a202c;
-
+  
   --markdown-body: #cbd5e0;
 }
 
@@ -126,3 +125,5 @@ nav .active {
   height: 100%;
   border: 0;
 }
+
+@tailwind utilities;

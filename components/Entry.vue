@@ -15,8 +15,7 @@
           <div
             v-for="t in tags"
             :key="t"
-            :class = "['border-' + colors[t] + '-500', 'bg-' + colors[t] + '-500']"
-            class = "text-xs uppercase rounded-full border-2 text-white font-semibold py-1 px-2 mx-1 shadow-md text-center mb-2"
+            class = "text-xs uppercase rounded-full border-2 font-semibold py-1 px-2 mx-1 shadow-md text-center mb-2"
             >
             {{t}}
           </div>
@@ -95,6 +94,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>
