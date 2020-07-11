@@ -65,24 +65,12 @@
   fill: var(--text-copy-secondary);
 }
 
-
 .cv {
   color: #1c75bc;
 }
 .cv:hover {
   color: #3290dd;
 }
-
-a:hover {
-  font-weight: bolder;
-}
-
-nav .active {
-  font-weight: bold;
-  border-color: var(--border-border-color-primary);
-  /*@apply border-black border-b;*/
-}
-
 
 .content-wrapper {
   transition: background-color .25s;

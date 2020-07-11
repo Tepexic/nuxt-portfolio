@@ -13,19 +13,19 @@
           </a>
         </li>
         <li>
-          <router-link to="/" class="text-copy-primary hover:text-gray-500" alt="Go Home">
-            Home
-          </router-link>
+          <nuxt-link to="/" class="text-copy-primary hover:text-gray-500" alt="Go to about">
+            About
+          </nuxt-link>
         </li>
         <li>
-          <router-link to="/projects" class="text-copy-primary hover:text-gray-500" alt="Go to Projects">
+          <nuxt-link to="/projects" class="text-copy-primary hover:text-gray-500" alt="Go to Projects">
             Projects
-          </router-link>
+          </nuxt-link>
         </li>
         <li>
-          <router-link to="/blog" class="text-copy-primary hover:text-gray-500" alt="Go to Blog">
+          <nuxt-link to="/blog" class="text-copy-primary hover:text-gray-500" alt="Go to Blog">
             Blog
-          </router-link>
+          </nuxt-link>
         </li>
       </ul>
     </nav>
@@ -52,5 +52,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.nuxt-link-exact-active {
+  @apply pb-2;
+  @apply border-b-2;
+}
 </style>

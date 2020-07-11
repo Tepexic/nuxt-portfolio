@@ -1,4 +1,14 @@
-# Recursos gratuitos para desarrollo web
+---
+title: Recursos gratuitos para desarrollo web
+description: Plataformas de aprendizaje gratuitas, páginas web, canales de youtube, podcasts y recursos para desarolladores.
+img: "https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg"
+alt: Recursos gratuitos para desarrollo web
+author: 
+  name: Jesus Velazquez
+  bio: Pro Stack Overflow copy-paster
+  img: static/images/avatar.png
+---
+## Recursos gratuitos para desarrollo web
 
 Vi este hilo en un tuit de [Marko Denic](https://twitter.com/denicmarko/status/1277492413032992768) y creo que es bastante útil. Iré agregando recursos y secciones más adelante.
 

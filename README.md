@@ -1,7 +1,7 @@
 # Personal Portfiolio in Nuxt
-I already had a [personal portfolio in Vue](https://github.com/Tepexic/tepexic). But I only had static hosting. So sharing a blogpost or a link to any project was not possible.
+Personal portfolio using Vue, Nuxt and Nuxt Content.
 
-This is the Nuxt version of my personal portfolio.
+I already had a [personal portfolio in Vue](https://github.com/Tepexic/tepexic), but I only had static hosting, so sharing a blogpost or a link to any project was not possible. This is the Nuxt version of  it.
 
 ## Build Setup
 

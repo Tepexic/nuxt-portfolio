@@ -1,39 +1,27 @@
 <template>
-  <div class="mx-auto container px-4 md:container-inner lg:container-inner xl:container-inner">
-    <div class="flex-wrap items-center justify-center w-full">
-      <Entry v-for="e in entries" :key="e.id"
-        :title="e.title" :author="e.author"
-        :date="e.date" :description="e.description"
-        :hero="e.hero"
-        :link="e.id" :tags="e.tags"/>
-    </div>
+  <div class="mx-auto container px-4 md:container-inner  md:px-4  lg:px-40 lg:container-inner xl:container-inner">
+    <Entry v-for="a in articles" :key="a.slug" :title="a.title" :description="a.description" :author="a.author.name" :date="a.createdAt" :link="a.slug" :hero="a.img" :tags="a.tags"/>
   </div>
 </template>
 
 <script>
-import posts from './../static/posts.json'
-import Entry from './../components/Entry'
-
-const blogEntries = []
-Object.keys(posts).map(section => {
-  posts[section].forEach(entry => {blogEntries.push(entry)})
-})
+import Entry from '@/components/Entry'
 
 export default {
-  name: 'BlogIndex',
-
-  data: function () {
+  async asyncData({ $content, params }) {
+    const articles = await $content('articles', params.slug)
+      .only(['title', 'description', 'img', 'slug', 'author'])
+      .sortBy('createdAt', 'desc')
+      .fetch()
     return {
-      entries: blogEntries
+      articles
     }
   },
+  
+  components: { Entry },
 
-  components: { Entry }
 }
 </script>
 
 <style scoped>
-a {
-    color: #1c75bc;
-}
 </style>
