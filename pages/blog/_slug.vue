@@ -1,5 +1,5 @@
 <template>
-  <article class="container-inner mx-auto" >
+  <article class="container md:container-inner mx-auto" >
 
     <div class="text-white shadow-lg w-full bg-fixed" v-bind:style="{ 'background-image': 'url(' + article.img + ')' }">
       <div class="mt-8 flex uppercase text-sm justify-end px-4 bg-gray-800 bg-opacity-75">
@@ -123,10 +123,7 @@ export default {
   @apply border-2;
   @apply border-gray-300;
   @apply m-auto;
-  @apply w-1/2;
-}
-
-.inline-svg {
-  @apply bg-red-500;
+  @apply bg-gray-400;
+  @apply w-7/12;
 }
 </style>

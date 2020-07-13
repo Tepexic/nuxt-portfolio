@@ -1,6 +1,8 @@
 <template>
   <div class="mx-auto container px-4 md:container-inner  md:px-4  lg:px-40 lg:container-inner xl:container-inner">
-    <Entry v-for="a in articles" :key="a.slug" :title="a.title" :description="a.description" :author="a.author.name" :date="a.createdAt" :link="a.slug" :hero="a.img" :tags="a.tags"/>
+    <Entry v-for="a in articles" :key="a.slug" :title="a.title" :description="a.description"
+      :author="a.author.name" :date="a.createdAt" :link="a.slug" :tags="a.tags"
+      :hero="a.img.includes('http') ? a.img : 'blog/' + a.img"/>
   </div>
 </template>
 

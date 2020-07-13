@@ -1,5 +1,5 @@
 # Personal Portfiolio in Nuxt
-Personal portfolio using Vue, Nuxt and Nuxt Content.
+Personal portfolio using Vue, Nuxt and Nuxt Content as CMS. Injects .md files as HTML in a vue components.
 
 I already had a [personal portfolio in Vue](https://github.com/Tepexic/tepexic), but I only had static hosting, so sharing a blogpost or a link to any project was not possible. This is the Nuxt version of  it.
 
