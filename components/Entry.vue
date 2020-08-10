@@ -1,5 +1,5 @@
 <template>
-  <article class="my-4 shadow-lg rounded-lg lg:my-10 lg:py-4 lg:px-4 border-gray-200 border-2">
+  <article class="my-4 shadow-lg rounded-lg lg:my-10 lg:py-4 lg:px-4 border-gray-200 border-2 transition duration-500 ease-in-out transform hover:scale-105">
     <nuxt-link :to="'/blog/' + link">
       <div class="sm:flex-wrap md:flex">
         <img class="h-48 w-full object-cover rounded-t-md xl:w-3/12 xl:rounded-lg"
