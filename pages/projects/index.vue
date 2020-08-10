@@ -19,6 +19,14 @@ export default {
           ghlink: 'https://github.com/Tepexic/whack-a-vue',
           tecs: ['vue', 'tailwind', 'localStorage'],
           hero: 'https://tepexic.com/whack-a-vue/whack-a-vue.gif'
+        },
+        {
+          title: '$ Vue',
+          description: "$ Vue is an application to expenses and deposits across multiple cards, final project of Scrimba's Vue Bootcamp. Uses Vuex for state management and Vue Router for internal routing",
+          link: 'https://tepexic.com/dollar-vue/',
+          ghlink: 'https://github.com/Tepexic/dollar-vue',
+          tecs: ['vue', 'vuex', 'vue router', 'tailwind'],
+          hero: 'https://tepexic.com/dollar-vue/dollar-vue.png'
         }
       ]
     }

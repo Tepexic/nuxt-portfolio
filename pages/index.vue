@@ -35,7 +35,7 @@
         movies, videogames and TV shows. <br>
       </p>
       <p class="text-lg sm:text-xl text-center">
-        <a href="/CV_JesusVelazquez.pdf" target="_blank" class="cv">
+        <a href="https://tepexic.com/CV_JesusVelazquez.pdf" target="_blank" class="cv">
           Here's a PDF version of my CV (92kb)
         </a>
       </p>
