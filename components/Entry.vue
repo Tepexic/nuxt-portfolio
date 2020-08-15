@@ -5,7 +5,7 @@
     :title="title">
   </div>
 
-  <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+  <div class="w-full border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
     <div class="mb-8">
       <!--title-->
       <nuxt-link :to="'/blog/' + link">
