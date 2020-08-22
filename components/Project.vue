@@ -1,5 +1,5 @@
 <template>
-<section class="w-full lg:flex my-4 shadow-lg">
+<section class="w-full lg:flex my-8 shadow-lg">
   <div class="h-56 lg:h-auto lg:w-56 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
     v-bind:style="{ backgroundImage: 'url(' + hero + ')' }"
     :title="title">
