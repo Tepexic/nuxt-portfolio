@@ -32,13 +32,16 @@
       <!-- content from markdown -->
       <nuxt-content class="" :document="article" />
       <!-- 
-      <author :author="article.author" />
+      <author :author="article.author" />-->
       
-      <PrevNext :prev="prev" :next="next" class="mt-8" />-->
+      <PrevNext :prev="prev" :next="next" class="mt-8" />
     </div>
   </article>
 </template>
+
 <script>
+import PrevNext from '@/components/PrevNext'
+
 export default {
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
@@ -58,7 +61,8 @@ export default {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
     }
-  }
+  },
+  components: { PrevNext }
 }
 </script>
 <style>
@@ -73,10 +77,14 @@ export default {
 .nuxt-content h2 {
   font-weight: bold;
   font-size: 28px;
+  @apply mt-6;
+  @apply mb-4;
 }
 .nuxt-content h3 {
   font-weight: bold;
   font-size: 22px;
+  @apply mt-4;
+  @apply mb-2;
 }
 .nuxt-content h1 {
   @apply font-semibold;
@@ -93,6 +101,7 @@ export default {
 }
 .nuxt-content pre {
   @apply m-4;
+  @apply rounded;
 }
 .nuxt-content code {
   @apply m-4;
@@ -125,5 +134,18 @@ export default {
   @apply m-auto;
   @apply bg-gray-400;
   @apply h-48;
+}
+.nuxt-content-highlight {
+  @apply relative;
+}
+.nuxt-content-highlight .filename {
+  @apply absolute;
+  @apply right-0;
+  @apply text-gray-600;
+  @apply font-light;
+  @apply z-10;
+  @apply mr-6;
+  @apply mt-1;
+  @apply text-sm;
 }
 </style>
