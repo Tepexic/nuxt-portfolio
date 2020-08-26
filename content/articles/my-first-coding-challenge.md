@@ -54,7 +54,7 @@ npm install --save jest
 
 Then my first test was:
 
-```javascript[]
+```javascript[humanSize.spec.js]
 test("Should return 3.1kB", () => {
     expect(humanSize(3125)).toBe("3.1kB");
   });
@@ -63,74 +63,74 @@ Given 3125B, I knew this was 3.125kB, but, by definition, I was to round that nu
 
 Then I went a bit picky and wrote the tests for an invalid input, such as a _String_, _NaN_, _Object_, _Array_ or simply a negative number:
 
-```javascript[]
+```javascript[humanSize.spec.js]
 test("Should return 0kB when input is String", () => {
-  expect(humanSize("asd")).toBe("0kB");
-});
+    expect(humanSize("asd")).toBe("0kB");
+  });
 
-test("Should return 0kB when input is NaN", () => {
-  expect(humanSize(NaN)).toBe("0kB");
-});
+  test("Should return 0kB when input is NaN", () => {
+    expect(humanSize(NaN)).toBe("0kB");
+  });
 
-test("Should return 0kB when input is Object", () => {
-  expect(humanSize({ a: "foo", b: 123 })).toBe("0kB");
-});
+  test("Should return 0kB when input is Object", () => {
+    expect(humanSize({ a: "foo", b: 123 })).toBe("0kB");
+  });
 
-test("Should return 0kB when input is Array", () => {
-  expect(humanSize([200, 100])).toBe("0kB");
-});
+  test("Should return 0kB when input is Array", () => {
+    expect(humanSize([200, 100])).toBe("0kB");
+  });
 
-test("Should return 0kB when input is <0", () => {
-  expect(humanSize(-25)).toBe("0kB");
-});
+  test("Should return 0kB when input is <0", () => {
+    expect(humanSize(-25)).toBe("0kB");
+  });
 ```
 
 From this point onwards, the test should be focused on ensuring the correct output. So I wrote a test for every prefix:
 
-```javascript[]
+```javascript[humanSize.spec.js]
 test("Should return 31.3kB", () => {
-  expect(humanSize(31250)).toBe("31.3kB");
-});
+    expect(humanSize(31250)).toBe("31.3kB");
+  });
 
-test("Should return 31.3MB", () => {
-  expect(humanSize(31250000)).toBe("31.3MB");
-});
+  test("Should return 31.3MB", () => {
+    expect(humanSize(31250000)).toBe("31.3MB");
+  });
 
-test("Should return 31.3GB", () => {
-  expect(humanSize(31250000000)).toBe("31.3GB");
-});
+  test("Should return 31.3GB", () => {
+    expect(humanSize(31250000000)).toBe("31.3GB");
+  });
 
-test("Should return 31.3TB", () => {
-  expect(humanSize(31250000000000)).toBe("31.3TB");
-});
+  test("Should return 31.3TB", () => {
+    expect(humanSize(31250000000000)).toBe("31.3TB");
+  });
 
-test("Should return 31.3PB", () => {
-  expect(humanSize(31250000000000000)).toBe("31.3PB");
-});
+  test("Should return 31.3PB", () => {
+    expect(humanSize(31250000000000000)).toBe("31.3PB");
+  });
 
-test("Should return 31.3EB", () => {
-  expect(humanSize(31250000000000000000)).toBe("31.3EB");
-});
+  test("Should return 31.3EB", () => {
+    expect(humanSize(31250000000000000000)).toBe("31.3EB");
+  });
 
-test("Should return 31.3ZB", () => {
-  expect(humanSize(31250000000000000000000)).toBe("31.3ZB");
-});
+  test("Should return 31.3ZB", () => {
+    expect(humanSize(31250000000000000000000)).toBe("31.3ZB");
+  });
 
-test("Should return 31.3YB", () => {
-  expect(humanSize(31250000000000000000000000)).toBe("31.3YB");
-});
+  test("Should return 31.3YB", () => {
+    expect(humanSize(31250000000000000000000000)).toBe("31.3YB");
+  });
 ```
 
 And finally, test for the thousands of YB case:
 
-```javascript[]
+```javascript[humanSize.spec.js]
 test("Should return 3125YB", () => {
     expect(humanSize(3125000000000000000000000000)).toBe("3125YB");
   });
 ```
 
 Now I added the test script to my *package.json*:
-```javascript[]
+```javascript[package.json]
 "scripts": {
     "test": "jest",
   },
@@ -139,7 +139,7 @@ Now I added the test script to my *package.json*:
 ## The code
 I decided to focus on the invalid cases first. If we operate on something that is not a number (let's not count string concatenation), we would get a *NaN*. So I did that, and also added another check for negative numbers:
 
-```javascript[]
+```javascript[humanSize.js]
 function humanSize(b) {
     // default return when input is not valid
     const def = "0kB";
@@ -154,7 +154,7 @@ function humanSize(b) {
 This will pass the invalid input tests, but fail all others. In TDD, this is the right track.
 
 Now it's time to translate the flowchart into code. The first part is the dictionary and the initialization of variables
-```javascript[]
+```javascript[humanSize.js]
 function humanSize(b) {
     // default return when input is not valid
     const def = "0kB";
@@ -183,7 +183,7 @@ function humanSize(b) {
 
 Good, now I needed the loop. Notice I set up the first index of my dictionary to 1, and my pointer starts at 0. I did this because I needed to know if the number of bytes was at least on the range of *kB*, that means, the loop has to run at least once. This led me into a Do While statement.
 
-```javascript[]
+```javascript[humanSize.js]
 function humanSize(b) {
     // default return when input is not valid
     const def = "0kB";
@@ -224,7 +224,7 @@ const round = (n, decimals = 0) => Number(`${Math.round(`${n}e${decimals}`)}e-${
 
 So I embeded that into my `humanSize(b)` function, followed by the prefix:
 
-```javascript[]
+```javascript[humanSize.js]
 function humanSize(b) {
     // default return when input is not valid
     const def = "0kB";
