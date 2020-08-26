@@ -13,9 +13,17 @@ export default {
     return {
       projects: [
         {
+          title: 'LaTex Thesis Template',
+          description: "An open-source LaTeX template for my university, forked from Cambridge's template. It has now been expanded to two extra universities. The repository averages 20 visitors/day in the last month",
+          link: 'https://github.com/Tepexic/Tesis-UNAM/blob/master/tesis.pdf',
+          ghlink: 'https://github.com/Tepexic/Tesis-UNAM',
+          tecs: ['OSS', 'LaTeX'],
+          hero: 'https://tepexic.com/thesis/thesis.png'
+        },
+        {
           title: 'Whack-a-Vue',
           description: "Vue implementation of the Whack-A-Mole game, as seen in Wes Bos' Javascript30 course, with levels, all time high score and restarting countdown timer",
-          link: 'https://tepexic.com/whack-a-vue/',
+          link: 'https://whack-a-vue.netlify.app/',
           ghlink: 'https://github.com/Tepexic/whack-a-vue',
           tecs: ['vue', 'tailwind', 'localStorage'],
           hero: 'https://tepexic.com/whack-a-vue/whack-a-vue.gif'

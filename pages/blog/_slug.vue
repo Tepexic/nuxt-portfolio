@@ -1,5 +1,5 @@
 <template>
-  <article class="container md:container-inner mx-auto" >
+  <article class="container max-w-screen-lg mx-auto" >
 
     <div class="text-white shadow-lg w-full bg-fixed" v-bind:style="{ 'background-image': 'url(' + article.img + ')' }">
       <div class="mt-8 flex uppercase text-sm justify-end px-4 bg-gray-800 bg-opacity-75">
@@ -9,15 +9,15 @@
         <span class="mr-3">•</span>
         <p>{{ article.author.name }}</p>
       </div>
-      <h1 class="text-6xl font-bold pl-2 bg-gray-800 bg-opacity-50">{{ article.title }}</h1>
+      <h1 class="text-4xl md:text-6xl font-bold pl-2 bg-gray-800 bg-opacity-50">{{ article.title }}</h1>
     </div>
 
     <div class="mt-4 px-4 md:px-16">
-      <h1 class="font-bold text-4xl">{{ article.title }}</h1>
+      <!--<h1 class="font-bold text-4xl">{{ article.title }}</h1>-->
       <p class="italic">{{ article.description }}</p>
       <p class="pb-4 text-xs uppercase">Post last updated: {{ formatDate(article.updatedAt) }}</p>
 
-      <!-- table of contents -->
+      <!-- table of contents 
       <nav class="pb-6">
         <h2 class="pt-4">Contents:</h2>
           <ul class="toc"
@@ -27,18 +27,21 @@
               </nuxtLink>
             </li>
           </ul>
-      </nav>
+      </nav>-->
 
       <!-- content from markdown -->
       <nuxt-content class="" :document="article" />
       <!-- 
-      <author :author="article.author" />
+      <author :author="article.author" />-->
       
-      <PrevNext :prev="prev" :next="next" class="mt-8" />-->
+      <PrevNext :prev="prev" :next="next" class="mt-8" />
     </div>
   </article>
 </template>
+
 <script>
+import PrevNext from '@/components/PrevNext'
+
 export default {
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
@@ -58,7 +61,8 @@ export default {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
     }
-  }
+  },
+  components: { PrevNext }
 }
 </script>
 <style>
@@ -73,10 +77,14 @@ export default {
 .nuxt-content h2 {
   font-weight: bold;
   font-size: 28px;
+  @apply mt-6;
+  @apply mb-4;
 }
 .nuxt-content h3 {
   font-weight: bold;
   font-size: 22px;
+  @apply mt-4;
+  @apply mb-2;
 }
 .nuxt-content h1 {
   @apply font-semibold;
@@ -92,10 +100,11 @@ export default {
   @apply list-inside;
 }
 .nuxt-content pre {
-  @apply px-4;
+  @apply m-4;
+  @apply rounded;
 }
 .nuxt-content code {
-  @apply p-4;
+  @apply m-4;
 }
 .nuxt-content table {
   @apply table-auto;
@@ -125,5 +134,18 @@ export default {
   @apply m-auto;
   @apply bg-gray-400;
   @apply h-48;
+}
+.nuxt-content-highlight {
+  @apply relative;
+}
+.nuxt-content-highlight .filename {
+  @apply absolute;
+  @apply right-0;
+  @apply text-gray-600;
+  @apply font-light;
+  @apply z-10;
+  @apply mr-6;
+  @apply mt-1;
+  @apply text-sm;
 }
 </style>

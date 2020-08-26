@@ -1,7 +1,7 @@
 ---
 title: Recursos gratuitos para desarrollo web
 description: Plataformas de aprendizaje gratuitas, páginas web, canales de youtube, podcasts y recursos para desarolladores.
-img: "https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg"
+img: "https://images.unsplash.com/photo-1548393488-ae8f117cbc1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2158&q=80"
 alt: Recursos gratuitos para desarrollo web
 author: 
   name: Jesus Velazquez
