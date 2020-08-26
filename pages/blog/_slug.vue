@@ -126,14 +126,13 @@ export default {
   @apply text-blue-400;
 }
 .nuxt-content img {
-  @apply mt-4;
+  @apply my-4;
   @apply rounded-lg;
   @apply shadow-lg;
   @apply border-2;
   @apply border-gray-300;
   @apply m-auto;
   @apply bg-gray-400;
-  @apply h-48;
 }
 .nuxt-content-highlight {
   @apply relative;

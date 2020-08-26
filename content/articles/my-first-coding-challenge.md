@@ -33,6 +33,7 @@ The problem statement had another restriction: *If the number of bytes is >= 100
 If the loop was broken by this last condition, the function had to return the rounded number of yottabytes. Otherwise, return the rounded number to 1 decimal place and concatenate it as a string to the dictionary prefix extracted by the pointer.
 
 After some iterations, I had this:
+
 ![Algorithm flowchart](https://tepexic.com/assets/blog/my-first-coding-challenge/chalk-diagram.png)
 
 I wasn't planning on error handling here, I thought that was best left to the coding part. But I wanted the function to return *'0kB'* if the input was not valid.
