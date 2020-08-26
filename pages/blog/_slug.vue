@@ -1,5 +1,5 @@
 <template>
-  <article class="container md:container-inner mx-auto" >
+  <article class="container max-w-screen-lg mx-auto" >
 
     <div class="text-white shadow-lg w-full bg-fixed" v-bind:style="{ 'background-image': 'url(' + article.img + ')' }">
       <div class="mt-8 flex uppercase text-sm justify-end px-4 bg-gray-800 bg-opacity-75">
@@ -9,15 +9,15 @@
         <span class="mr-3">•</span>
         <p>{{ article.author.name }}</p>
       </div>
-      <h1 class="text-6xl font-bold pl-2 bg-gray-800 bg-opacity-50">{{ article.title }}</h1>
+      <h1 class="text-4xl md:text-6xl font-bold pl-2 bg-gray-800 bg-opacity-50">{{ article.title }}</h1>
     </div>
 
     <div class="mt-4 px-4 md:px-16">
-      <h1 class="font-bold text-4xl">{{ article.title }}</h1>
+      <!--<h1 class="font-bold text-4xl">{{ article.title }}</h1>-->
       <p class="italic">{{ article.description }}</p>
       <p class="pb-4 text-xs uppercase">Post last updated: {{ formatDate(article.updatedAt) }}</p>
 
-      <!-- table of contents -->
+      <!-- table of contents 
       <nav class="pb-6">
         <h2 class="pt-4">Contents:</h2>
           <ul class="toc"
@@ -27,7 +27,7 @@
               </nuxtLink>
             </li>
           </ul>
-      </nav>
+      </nav>-->
 
       <!-- content from markdown -->
       <nuxt-content class="" :document="article" />
@@ -92,10 +92,10 @@ export default {
   @apply list-inside;
 }
 .nuxt-content pre {
-  @apply px-4;
+  @apply m-4;
 }
 .nuxt-content code {
-  @apply p-4;
+  @apply m-4;
 }
 .nuxt-content table {
   @apply table-auto;
