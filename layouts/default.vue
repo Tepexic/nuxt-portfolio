@@ -1,14 +1,18 @@
 <template>
-  <div id="app" class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen" :class="theme">
+  <div id="app" class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal0 min-h-screen flex flex-col" :class="theme">
     <Navigation :theme="theme" @themeChanged="updateTheme"/>
-    <transition name="moveUp" mode="out-in">
-      <Nuxt :theme="theme"/>
-    </transition>
+    <div class="flex-1">
+      <transition name="moveUp" mode="out-in">
+        <Nuxt :theme="theme"/>
+      </transition>
+    </div>
+    <Foot/>
   </div>
 </template>
 
 <script>
 import Navigation from '@/components/Navigation'
+import Foot from '@/components/Foot'
 export default {
   data: function () {
     return {
@@ -17,8 +21,9 @@ export default {
   },
 
   components: {
-    Navigation
-  },
+    Navigation,
+    Foot
+    },
 
   methods: {
     updateTheme(theme) {
