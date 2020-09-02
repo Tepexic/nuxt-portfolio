@@ -5,7 +5,7 @@
     :title="title">
   </div>
 
-  <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+  <div class="rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
     <div class="mb-8">
       <!--title-->
       <div class="font-bold text-xl mb-2 text-blue-600">
