@@ -13,12 +13,20 @@ export default {
     return {
       projects: [
         {
+          title: 'Tip Calculator PWA',
+          description: "A Progressive Web App of a simple tip calculator made in Vue, with range sliders for tip % and number of people to split the check with.",
+          link: 'https://propina.netlify.app/',
+          ghlink: 'https://github.com/Tepexic/tip-calculator-vue-pwa',
+          tecs: ['vue', 'tailwind', 'localStorage', 'PWA'],
+          hero: '/images/tip-pwa.png'
+        },
+        {
           title: 'LaTex Thesis Template',
           description: "An open-source LaTeX template for my university, forked from Cambridge's template. It has now been expanded to two extra universities. The repository averages 20 visitors/day in the last month",
           link: 'https://github.com/Tepexic/Tesis-UNAM/blob/master/tesis.pdf',
           ghlink: 'https://github.com/Tepexic/Tesis-UNAM',
           tecs: ['OSS', 'LaTeX'],
-          hero: 'https://tepexic.com/thesis/thesis.png'
+          hero: '/images/thesis.png'
         },
         {
           title: 'Whack-a-Vue',
@@ -26,7 +34,7 @@ export default {
           link: 'https://whack-a-vue.netlify.app/',
           ghlink: 'https://github.com/Tepexic/whack-a-vue',
           tecs: ['vue', 'tailwind', 'localStorage'],
-          hero: 'https://tepexic.com/whack-a-vue/whack-a-vue.gif'
+          hero: '/images/whack-a-vue.gif'
         },
         {
           title: '$ Vue',
@@ -34,7 +42,7 @@ export default {
           link: 'https://tepexic.com/dollar-vue/',
           ghlink: 'https://github.com/Tepexic/dollar-vue',
           tecs: ['vue', 'vuex', 'vue router', 'tailwind'],
-          hero: 'https://tepexic.com/dollar-vue/dollar-vue.png'
+          hero: '/images/dollar-vue.png'
         }
       ]
     }
