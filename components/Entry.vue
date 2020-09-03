@@ -1,5 +1,5 @@
 <template>
-<article class="w-full lg:flex my-8 shadow-lg">
+<article class="w-full xl:w-5/12 lg:flex my-8 shadow-lg">
   <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
     v-bind:style="{ backgroundImage: 'url(' + hero + ')' }"
     :title="title">
