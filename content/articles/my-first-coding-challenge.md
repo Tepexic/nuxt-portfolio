@@ -270,4 +270,7 @@ That was it. The only thing left was to create a `.gitignore` to avoid pushing t
 
 They asked me to submit the function inside a GitHub gist, so I did. I'm waiting for their response now. I'll update as soon as I know anything :)
 
+
+Update: Didn't get the job. It was a good challenge, though.
+
 [Here's the repo of this code](https://github.com/Tepexic/human-size).
