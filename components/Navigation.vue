@@ -23,9 +23,9 @@
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/blog" class="text-copy-primary hover:text-gray-500" alt="Go to Blog">
+          <a href="https://dev.to/tepexic" class="text-copy-primary hover:text-gray-500" alt="Go to Blog">
             Blog
-          </nuxt-link>
+          </a>
         </li>
       </ul>
     </nav>

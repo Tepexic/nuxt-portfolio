@@ -13,6 +13,14 @@ export default {
     return {
       projects: [
         {
+          title: 'Profile search',
+          description: "Vue app for searching profiles on a user database fetched from an API. Highlights keyword and searches data in realtime.",
+          link: 'https://bravado-quest.netlify.app/',
+          ghlink: 'https://github.com/Tepexic/bravado-quest',
+          tecs: ['vue', 'tailwind', 'search', 'highlight'],
+          hero: '/images/profile-search.png'
+        },
+        {
           title: 'Tip Calculator PWA',
           description: "A Progressive Web App of a simple tip calculator made in Vue, with range sliders for tip % and number of people to split the check with.",
           link: 'https://propina.netlify.app/',
